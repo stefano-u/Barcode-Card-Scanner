@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		AE26EB3321AA149A00B8CAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26EB3221AA149A00B8CAEB /* AppDelegate.swift */; };
-		AE26EB3521AA149A00B8CAEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26EB3421AA149A00B8CAEB /* ViewController.swift */; };
+		AE26EB3521AA149A00B8CAEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26EB3421AA149A00B8CAEB /* HomeViewController.swift */; };
 		AE26EB3821AA149A00B8CAEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE26EB3621AA149A00B8CAEB /* Main.storyboard */; };
 		AE26EB3A21AA149B00B8CAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE26EB3921AA149B00B8CAEB /* Assets.xcassets */; };
 		AE26EB3D21AA149B00B8CAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE26EB3B21AA149B00B8CAEB /* LaunchScreen.storyboard */; };
 		AE26EB4821AA149B00B8CAEB /* Barcode_Card_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26EB4721AA149B00B8CAEB /* Barcode_Card_ScannerTests.swift */; };
 		AE26EB5321AA149B00B8CAEB /* Barcode_Card_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26EB5221AA149B00B8CAEB /* Barcode_Card_ScannerUITests.swift */; };
+		AE66820C21AB3F180031F6ED /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66820B21AB3F180031F6ED /* TabBarController.swift */; };
+		AE66820E21AB52690031F6ED /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66820D21AB52690031F6ED /* DealViewController.swift */; };
+		AE66821021AB54320031F6ED /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66820F21AB54320031F6ED /* Deal.swift */; };
+		AE66821221AB57630031F6ED /* DealWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66821121AB57630031F6ED /* DealWebsiteViewController.swift */; };
+		AE97C3E721AC263700BC6DBF /* CardOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97C3E621AC263700BC6DBF /* CardOptionCell.swift */; };
+		AE97C3E921AC292400BC6DBF /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97C3E821AC292400BC6DBF /* DealCell.swift */; };
+		AEE7748E21AB1A8700C23B0B /* ViewAllCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE7748D21AB1A8700C23B0B /* ViewAllCardsViewController.swift */; };
+		AEE7749021AB1B9500C23B0B /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE7748F21AB1B9500C23B0B /* CardCell.swift */; };
+		AEE7749221AB2B4A00C23B0B /* SelectedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE7749121AB2B4A00C23B0B /* SelectedCardViewController.swift */; };
+		AEE7749421AB2B5400C23B0B /* SelectedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE7749321AB2B5400C23B0B /* SelectedDetailsViewController.swift */; };
+		AEEE7B3521AA4F5F00B37D5F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B3421AA4F5F00B37D5F /* SettingsViewController.swift */; };
+		AEEE7B3721AA4FA900B37D5F /* CardOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B3621AA4FA900B37D5F /* CardOptionViewController.swift */; };
+		AEEE7B3E21AA575E00B37D5F /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B3921AA575D00B37D5F /* CameraHandler.swift */; };
+		AEEE7B4021AA575E00B37D5F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B3B21AA575E00B37D5F /* Card.swift */; };
+		AEEE7B4321AA63C000B37D5F /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B4221AA63C000B37D5F /* SoundEffect.swift */; };
+		AEEE7B4521AA67C600B37D5F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B4421AA67C600B37D5F /* CameraViewController.swift */; };
+		AEEE7B4721AA713300B37D5F /* ManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B4621AA713300B37D5F /* ManualViewController.swift */; };
+		AEEE7B4A21AA728D00B37D5F /* BarcodeFound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEEE7B4821AA728D00B37D5F /* BarcodeFound.mp3 */; };
+		AEEE7B4B21AA728D00B37D5F /* Error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEEE7B4921AA728D00B37D5F /* Error.mp3 */; };
+		AEEE7B4D21AA791900B37D5F /* CardMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE7B4C21AA791900B37D5F /* CardMethodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +56,7 @@
 /* Begin PBXFileReference section */
 		AE26EB2F21AA149A00B8CAEB /* Barcode Card Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Barcode Card Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE26EB3221AA149A00B8CAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE26EB3421AA149A00B8CAEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE26EB3421AA149A00B8CAEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE26EB3721AA149A00B8CAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE26EB3921AA149B00B8CAEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE26EB3C21AA149B00B8CAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +67,26 @@
 		AE26EB4E21AA149B00B8CAEB /* Barcode Card ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Barcode Card ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE26EB5221AA149B00B8CAEB /* Barcode_Card_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode_Card_ScannerUITests.swift; sourceTree = "<group>"; };
 		AE26EB5421AA149B00B8CAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE66820B21AB3F180031F6ED /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AE66820D21AB52690031F6ED /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
+		AE66820F21AB54320031F6ED /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
+		AE66821121AB57630031F6ED /* DealWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealWebsiteViewController.swift; sourceTree = "<group>"; };
+		AE97C3E621AC263700BC6DBF /* CardOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOptionCell.swift; sourceTree = "<group>"; };
+		AE97C3E821AC292400BC6DBF /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
+		AEE7748D21AB1A8700C23B0B /* ViewAllCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllCardsViewController.swift; sourceTree = "<group>"; };
+		AEE7748F21AB1B9500C23B0B /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		AEE7749121AB2B4A00C23B0B /* SelectedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCardViewController.swift; sourceTree = "<group>"; };
+		AEE7749321AB2B5400C23B0B /* SelectedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDetailsViewController.swift; sourceTree = "<group>"; };
+		AEEE7B3421AA4F5F00B37D5F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AEEE7B3621AA4FA900B37D5F /* CardOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOptionViewController.swift; sourceTree = "<group>"; };
+		AEEE7B3921AA575D00B37D5F /* CameraHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
+		AEEE7B3B21AA575E00B37D5F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AEEE7B4221AA63C000B37D5F /* SoundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
+		AEEE7B4421AA67C600B37D5F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		AEEE7B4621AA713300B37D5F /* ManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualViewController.swift; sourceTree = "<group>"; };
+		AEEE7B4821AA728D00B37D5F /* BarcodeFound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BarcodeFound.mp3; sourceTree = "<group>"; };
+		AEEE7B4921AA728D00B37D5F /* Error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Error.mp3; sourceTree = "<group>"; };
+		AEEE7B4C21AA791900B37D5F /* CardMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMethodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +137,10 @@
 		AE26EB3121AA149A00B8CAEB /* Barcode Card Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				AE26EB3221AA149A00B8CAEB /* AppDelegate.swift */,
-				AE26EB3421AA149A00B8CAEB /* ViewController.swift */,
-				AE26EB3621AA149A00B8CAEB /* Main.storyboard */,
-				AE26EB3921AA149B00B8CAEB /* Assets.xcassets */,
-				AE26EB3B21AA149B00B8CAEB /* LaunchScreen.storyboard */,
+				AE26EB6221AA153D00B8CAEB /* Images & Audio */,
+				AE26EB6021AA14EE00B8CAEB /* Classes */,
+				AE26EB6121AA14F500B8CAEB /* View Controllers */,
+				AE55BC2421AA4D9800DE58DD /* Storyboards */,
 				AE26EB3E21AA149B00B8CAEB /* Info.plist */,
 			);
 			path = "Barcode Card Scanner";
@@ -123,6 +162,59 @@
 				AE26EB5421AA149B00B8CAEB /* Info.plist */,
 			);
 			path = "Barcode Card ScannerUITests";
+			sourceTree = "<group>";
+		};
+		AE26EB6021AA14EE00B8CAEB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AE26EB3221AA149A00B8CAEB /* AppDelegate.swift */,
+				AEEE7B4221AA63C000B37D5F /* SoundEffect.swift */,
+				AEEE7B3B21AA575E00B37D5F /* Card.swift */,
+				AE66820F21AB54320031F6ED /* Deal.swift */,
+				AEEE7B3921AA575D00B37D5F /* CameraHandler.swift */,
+				AEE7748F21AB1B9500C23B0B /* CardCell.swift */,
+				AE97C3E621AC263700BC6DBF /* CardOptionCell.swift */,
+				AE97C3E821AC292400BC6DBF /* DealCell.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE26EB6121AA14F500B8CAEB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE26EB3421AA149A00B8CAEB /* HomeViewController.swift */,
+				AEEE7B3421AA4F5F00B37D5F /* SettingsViewController.swift */,
+				AEEE7B3621AA4FA900B37D5F /* CardOptionViewController.swift */,
+				AEEE7B4C21AA791900B37D5F /* CardMethodViewController.swift */,
+				AEEE7B4421AA67C600B37D5F /* CameraViewController.swift */,
+				AEEE7B4621AA713300B37D5F /* ManualViewController.swift */,
+				AEE7748D21AB1A8700C23B0B /* ViewAllCardsViewController.swift */,
+				AE66820B21AB3F180031F6ED /* TabBarController.swift */,
+				AEE7749121AB2B4A00C23B0B /* SelectedCardViewController.swift */,
+				AEE7749321AB2B5400C23B0B /* SelectedDetailsViewController.swift */,
+				AE66820D21AB52690031F6ED /* DealViewController.swift */,
+				AE66821121AB57630031F6ED /* DealWebsiteViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AE26EB6221AA153D00B8CAEB /* Images & Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AEEE7B4821AA728D00B37D5F /* BarcodeFound.mp3 */,
+				AEEE7B4921AA728D00B37D5F /* Error.mp3 */,
+				AE26EB3921AA149B00B8CAEB /* Assets.xcassets */,
+			);
+			path = "Images & Audio";
+			sourceTree = "<group>";
+		};
+		AE55BC2421AA4D9800DE58DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AE26EB3621AA149A00B8CAEB /* Main.storyboard */,
+				AE26EB3B21AA149B00B8CAEB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +323,8 @@
 			files = (
 				AE26EB3D21AA149B00B8CAEB /* LaunchScreen.storyboard in Resources */,
 				AE26EB3A21AA149B00B8CAEB /* Assets.xcassets in Resources */,
+				AEEE7B4A21AA728D00B37D5F /* BarcodeFound.mp3 in Resources */,
+				AEEE7B4B21AA728D00B37D5F /* Error.mp3 in Resources */,
 				AE26EB3821AA149A00B8CAEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +350,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE26EB3521AA149A00B8CAEB /* ViewController.swift in Sources */,
+				AEEE7B4D21AA791900B37D5F /* CardMethodViewController.swift in Sources */,
+				AE66821021AB54320031F6ED /* Deal.swift in Sources */,
+				AE66820C21AB3F180031F6ED /* TabBarController.swift in Sources */,
+				AE97C3E921AC292400BC6DBF /* DealCell.swift in Sources */,
+				AEEE7B3721AA4FA900B37D5F /* CardOptionViewController.swift in Sources */,
+				AE66821221AB57630031F6ED /* DealWebsiteViewController.swift in Sources */,
+				AEE7748E21AB1A8700C23B0B /* ViewAllCardsViewController.swift in Sources */,
+				AEE7749421AB2B5400C23B0B /* SelectedDetailsViewController.swift in Sources */,
+				AEEE7B3521AA4F5F00B37D5F /* SettingsViewController.swift in Sources */,
+				AEE7749221AB2B4A00C23B0B /* SelectedCardViewController.swift in Sources */,
+				AEEE7B4321AA63C000B37D5F /* SoundEffect.swift in Sources */,
+				AEEE7B3E21AA575E00B37D5F /* CameraHandler.swift in Sources */,
+				AE26EB3521AA149A00B8CAEB /* HomeViewController.swift in Sources */,
 				AE26EB3321AA149A00B8CAEB /* AppDelegate.swift in Sources */,
+				AE97C3E721AC263700BC6DBF /* CardOptionCell.swift in Sources */,
+				AEEE7B4021AA575E00B37D5F /* Card.swift in Sources */,
+				AEEE7B4721AA713300B37D5F /* ManualViewController.swift in Sources */,
+				AEE7749021AB1B9500C23B0B /* CardCell.swift in Sources */,
+				AE66820E21AB52690031F6ED /* DealViewController.swift in Sources */,
+				AEEE7B4521AA67C600B37D5F /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +545,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N5QRCPNX34;
 				INFOPLIST_FILE = "Barcode Card Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +564,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N5QRCPNX34;
 				INFOPLIST_FILE = "Barcode Card Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

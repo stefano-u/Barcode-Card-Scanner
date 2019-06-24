@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qrO-ld-Y7a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_Normal" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-ty-SIM">
+                                <rect key="frame" x="40" y="84" width="295" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="WDg-tt-j32"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ois-e0-hV0">
+                                <rect key="frame" x="50" y="253" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="ADD NEW CARD">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dRs-Ef-PAC" kind="show" identifier="SegueToCardOption" id="NpF-cA-zaI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTI-G7-JH1">
+                                <rect key="frame" x="50" y="303" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="VIEW ALL CARDS">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="1Kc-kq-UY0" kind="show" identifier="SegueToViewAllCards" id="wxb-jk-Rhg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5I-Z3-0eo">
+                                <rect key="frame" x="50" y="353" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="VIEW DEALS">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="WG6-u4-7l3" kind="show" identifier="SegueToDeals" id="lN9-wf-zWl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-rx-sti">
+                                <rect key="frame" x="50" y="403" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="SETTINGS">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="5yu-g4-NWs" kind="show" identifier="SegueToSettings" id="xwZ-nz-NEH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HTI-G7-JH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2mr-WB-H8g"/>
+                            <constraint firstItem="ois-e0-hV0" firstAttribute="top" secondItem="7Ga-ty-SIM" secondAttribute="bottom" constant="60" id="9Cz-GY-OOv"/>
+                            <constraint firstItem="f5I-Z3-0eo" firstAttribute="top" secondItem="HTI-G7-JH1" secondAttribute="bottom" constant="8" id="FKY-8y-lRL"/>
+                            <constraint firstItem="HTI-G7-JH1" firstAttribute="top" secondItem="ois-e0-hV0" secondAttribute="bottom" constant="8" id="GYS-PP-snZ"/>
+                            <constraint firstItem="NdR-rx-sti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="NdO-s2-XnQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HTI-G7-JH1" secondAttribute="trailing" constant="50" id="PXc-Zh-FQH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NdR-rx-sti" secondAttribute="trailing" constant="50" id="R6i-RM-dzd"/>
+                            <constraint firstItem="NdR-rx-sti" firstAttribute="top" secondItem="f5I-Z3-0eo" secondAttribute="bottom" constant="8" id="V05-Jp-qKD"/>
+                            <constraint firstItem="ois-e0-hV0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Wm3-8t-83a"/>
+                            <constraint firstItem="7Ga-ty-SIM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fHO-mS-zHZ"/>
+                            <constraint firstItem="f5I-Z3-0eo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="gnD-9p-BUm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ois-e0-hV0" secondAttribute="trailing" constant="50" id="kOS-XA-85k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5I-Z3-0eo" secondAttribute="trailing" constant="50" id="u68-xv-Ybq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ga-ty-SIM" secondAttribute="trailing" constant="40" id="yfY-bf-ugb"/>
+                            <constraint firstItem="7Ga-ty-SIM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zHe-dz-ubw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i6X-t7-V6b"/>
+                    <connections>
+                        <outlet property="btnAdd" destination="ois-e0-hV0" id="xJE-cP-Xsp"/>
+                        <outlet property="btnSettings" destination="NdR-rx-sti" id="fSR-Z6-5mc"/>
+                        <outlet property="btnViewAll" destination="HTI-G7-JH1" id="74X-kj-VHJ"/>
+                        <outlet property="btnViewDeals" destination="f5I-Z3-0eo" id="4gl-j4-olz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="133.5832083958021"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="zpY-ew-Mbf">
+            <objects>
+                <viewController title="Settings" id="5yu-g4-NWs" customClass="SettingsViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QJb-Mn-rw9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-Dm-CAH">
+                                <rect key="frame" x="50" y="174" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ETB-9I-eiS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="ABOUT US">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewAboutUs:" destination="5yu-g4-NWs" eventType="touchUpInside" id="PyF-48-Ifp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr0-ec-9mn">
+                                <rect key="frame" x="50" y="224" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="HHq-Gf-ppw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="REMOVE ALL CARDS">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="removeAllCards:" destination="5yu-g4-NWs" eventType="touchUpInside" id="AVz-rU-Hv5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOLUME: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-bL-NNf">
+                                <rect key="frame" x="50" y="274" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="BAq-CU-4AR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="t1v-J2-qhd">
+                                <rect key="frame" x="48" y="346" width="278" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="5yu-g4-NWs" eventType="valueChanged" id="h8o-KS-9jl"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gr0-ec-9mn" firstAttribute="top" secondItem="gVc-Dm-CAH" secondAttribute="bottom" constant="8" id="7ca-Eq-1DW"/>
+                            <constraint firstItem="t1v-J2-qhd" firstAttribute="top" secondItem="mfj-bL-NNf" secondAttribute="bottom" constant="30" id="H9U-np-7oi"/>
+                            <constraint firstItem="sCb-qM-fpc" firstAttribute="trailing" secondItem="t1v-J2-qhd" secondAttribute="trailing" constant="51" id="Jz1-Cz-8rT"/>
+                            <constraint firstItem="sCb-qM-fpc" firstAttribute="trailing" secondItem="gVc-Dm-CAH" secondAttribute="trailing" constant="50" id="PEP-SF-WK8"/>
+                            <constraint firstItem="gVc-Dm-CAH" firstAttribute="top" secondItem="sCb-qM-fpc" secondAttribute="top" constant="110" id="TJu-Tz-wMF"/>
+                            <constraint firstItem="Gr0-ec-9mn" firstAttribute="leading" secondItem="sCb-qM-fpc" secondAttribute="leading" constant="50" id="VAl-fC-32A"/>
+                            <constraint firstItem="sCb-qM-fpc" firstAttribute="trailing" secondItem="mfj-bL-NNf" secondAttribute="trailing" constant="50" id="c5C-k0-32q"/>
+                            <constraint firstItem="mfj-bL-NNf" firstAttribute="leading" secondItem="sCb-qM-fpc" secondAttribute="leading" constant="50" id="dYF-Nr-Wun"/>
+                            <constraint firstItem="gVc-Dm-CAH" firstAttribute="leading" secondItem="sCb-qM-fpc" secondAttribute="leading" constant="50" id="gcE-Ab-0wS"/>
+                            <constraint firstItem="sCb-qM-fpc" firstAttribute="trailing" secondItem="Gr0-ec-9mn" secondAttribute="trailing" constant="50" id="nw3-pf-hyp"/>
+                            <constraint firstItem="mfj-bL-NNf" firstAttribute="top" secondItem="Gr0-ec-9mn" secondAttribute="bottom" constant="8" id="t3x-pi-gvN"/>
+                            <constraint firstItem="t1v-J2-qhd" firstAttribute="leading" secondItem="sCb-qM-fpc" secondAttribute="leading" constant="50" id="zL9-re-FFA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sCb-qM-fpc"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAbout" destination="gVc-Dm-CAH" id="7Iv-9p-iV4"/>
+                        <outlet property="btnRemoveAll" destination="Gr0-ec-9mn" id="2OM-d1-kcM"/>
+                        <outlet property="lblVolume" destination="mfj-bL-NNf" id="xRH-Ot-SJj"/>
+                        <outlet property="sldVol" destination="t1v-J2-qhd" id="yrE-an-j9b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MkZ-b6-an0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="887"/>
+        </scene>
+        <!--Card Option-->
+        <scene sceneID="TSU-sC-KBN">
+            <objects>
+                <tableViewController title="Card Option" id="dRs-Ef-PAC" customClass="CardOptionViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="App-wV-riN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardOptionCell" rowHeight="92" id="vJ7-O9-VYL" customClass="CardOptionCell" customModule="Barcode_Card_Scanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vJ7-O9-VYL" id="yzg-R2-Cq0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imgCard" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ddm-in-C4b">
+                                            <rect key="frame" x="16" y="10" width="63" height="71"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="71" id="AID-4K-5lV"/>
+                                                <constraint firstAttribute="width" constant="63" id="eEV-kq-WSb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MlV-na-kUp">
+                                            <rect key="frame" x="87" y="30" width="272" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="MlV-na-kUp" secondAttribute="bottom" constant="31.666666666666671" id="1BC-gc-bK7"/>
+                                        <constraint firstAttribute="trailing" secondItem="MlV-na-kUp" secondAttribute="trailing" constant="16" id="1ew-Qz-HMb"/>
+                                        <constraint firstItem="MlV-na-kUp" firstAttribute="top" secondItem="yzg-R2-Cq0" secondAttribute="top" constant="30" id="Fvk-Om-FBe"/>
+                                        <constraint firstItem="Ddm-in-C4b" firstAttribute="leading" secondItem="yzg-R2-Cq0" secondAttribute="leading" constant="16" id="KZg-sz-bqQ"/>
+                                        <constraint firstItem="Ddm-in-C4b" firstAttribute="top" secondItem="yzg-R2-Cq0" secondAttribute="top" constant="10" id="V1m-c4-B06"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ddm-in-C4b" secondAttribute="bottom" constant="10.666666666666671" id="cTy-9S-jO5"/>
+                                        <constraint firstItem="MlV-na-kUp" firstAttribute="leading" secondItem="Ddm-in-C4b" secondAttribute="trailing" constant="8" id="w4n-Tx-GXE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgCard" destination="Ddm-in-C4b" id="qdQ-xe-Eo2"/>
+                                    <outlet property="lblCardName" destination="MlV-na-kUp" id="jhd-Kp-Iv2"/>
+                                    <segue destination="cR9-xH-86s" kind="show" identifier="SegueToCardMethod" id="jRg-HN-TQM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dRs-Ef-PAC" id="m4m-aB-6xM"/>
+                            <outlet property="delegate" destination="dRs-Ef-PAC" id="9xU-xe-0do"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tblOptions" destination="App-wV-riN" id="CHH-0a-jBA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uiw-FY-jXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5652173913045" y="886.14130434782612"/>
+        </scene>
+        <!--Card Method-->
+        <scene sceneID="4yA-zx-EW2">
+            <objects>
+                <viewController title="Card Method" id="cR9-xH-86s" customClass="CardMethodViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R1Y-Na-JNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you like to add a new card?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jil-XS-m67">
+                                <rect key="frame" x="50" y="125" width="274" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="wK0-Xq-tnT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58g-va-36w">
+                                <rect key="frame" x="50" y="275" width="274" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="vVH-CW-9Wc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="USE CAMERA">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="J5p-A0-mcd" kind="show" identifier="SegueToCamera" id="eeG-MA-Lwq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ge-db-YOV">
+                                <rect key="frame" x="50" y="325" width="274" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="guR-IX-LP8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="MANUALLY ENTER">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dnZ-65-8RN" kind="show" identifier="SegueToManual" id="YqF-cC-jnR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jil-XS-m67" firstAttribute="leading" secondItem="P3W-Wz-5zH" secondAttribute="leading" constant="50" id="84t-wg-m90"/>
+                            <constraint firstItem="58g-va-36w" firstAttribute="top" secondItem="jil-XS-m67" secondAttribute="bottom" constant="77" id="Jt2-tP-6SH"/>
+                            <constraint firstItem="P3W-Wz-5zH" firstAttribute="trailing" secondItem="jil-XS-m67" secondAttribute="trailing" constant="51" id="Ltb-Sj-Uxc"/>
+                            <constraint firstItem="6ge-db-YOV" firstAttribute="top" secondItem="58g-va-36w" secondAttribute="bottom" constant="8" id="XjZ-Y7-yO4"/>
+                            <constraint firstItem="6ge-db-YOV" firstAttribute="leading" secondItem="P3W-Wz-5zH" secondAttribute="leading" constant="50" id="hHz-LG-p2a"/>
+                            <constraint firstItem="58g-va-36w" firstAttribute="leading" secondItem="P3W-Wz-5zH" secondAttribute="leading" constant="50" id="jWJ-0l-jKM"/>
+                            <constraint firstItem="P3W-Wz-5zH" firstAttribute="trailing" secondItem="58g-va-36w" secondAttribute="trailing" constant="51" id="rGX-FP-nIo"/>
+                            <constraint firstItem="jil-XS-m67" firstAttribute="top" secondItem="P3W-Wz-5zH" secondAttribute="top" constant="61" id="svB-wk-cpZ"/>
+                            <constraint firstItem="P3W-Wz-5zH" firstAttribute="trailing" secondItem="6ge-db-YOV" secondAttribute="trailing" constant="51" id="uNO-lI-XdH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P3W-Wz-5zH"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCamera" destination="58g-va-36w" id="7rE-Tj-meU"/>
+                        <outlet property="btnManual" destination="6ge-db-YOV" id="yap-3v-Rwo"/>
+                        <outlet property="lblQuestion" destination="jil-XS-m67" id="Kdx-Zs-eoc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvh-GO-TNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="1639.4302848575715"/>
+        </scene>
+        <!--View All Cards-->
+        <scene sceneID="3ut-9l-EJp">
+            <objects>
+                <tableViewController title="View All Cards" id="1Kc-kq-UY0" customClass="ViewAllCardsViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEA-NA-LaX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="92" id="iaG-h0-PwG" customClass="CardCell" customModule="Barcode_Card_Scanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaG-h0-PwG" id="2th-cm-4O8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imgCard" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-bB-f4F">
+                                            <rect key="frame" x="16" y="10" width="63" height="71"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="71" id="XKr-Gu-1te"/>
+                                                <constraint firstAttribute="width" constant="63" id="uVW-CK-AaC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-4M-7Zu">
+                                            <rect key="frame" x="87" y="22" width="272" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJH-JC-ZOP">
+                                            <rect key="frame" x="87" y="52" width="272" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KJH-JC-ZOP" firstAttribute="top" secondItem="HVX-4M-7Zu" secondAttribute="bottom" id="6tQ-Vp-DqN"/>
+                                        <constraint firstItem="0B8-bB-f4F" firstAttribute="leading" secondItem="2th-cm-4O8" secondAttribute="leading" constant="16" id="J7e-KT-19Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="KJH-JC-ZOP" secondAttribute="trailing" constant="16" id="KHc-8v-sMf"/>
+                                        <constraint firstAttribute="trailing" secondItem="HVX-4M-7Zu" secondAttribute="trailing" constant="16" id="ROm-cy-bPc"/>
+                                        <constraint firstItem="HVX-4M-7Zu" firstAttribute="leading" secondItem="0B8-bB-f4F" secondAttribute="trailing" constant="8" id="TJS-t6-F2T"/>
+                                        <constraint firstItem="0B8-bB-f4F" firstAttribute="top" secondItem="2th-cm-4O8" secondAttribute="top" constant="10" id="dxq-CF-oJ1"/>
+                                        <constraint firstAttribute="bottom" secondItem="0B8-bB-f4F" secondAttribute="bottom" constant="10.5" id="e3j-KR-ZO7"/>
+                                        <constraint firstItem="KJH-JC-ZOP" firstAttribute="leading" secondItem="0B8-bB-f4F" secondAttribute="trailing" constant="8" id="gbN-ou-2kq"/>
+                                        <constraint firstItem="HVX-4M-7Zu" firstAttribute="top" secondItem="2th-cm-4O8" secondAttribute="top" constant="22" id="o8W-F0-WnW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgCard" destination="0B8-bB-f4F" id="3KX-4v-4Vo"/>
+                                    <outlet property="lblCardName" destination="HVX-4M-7Zu" id="d4p-va-qzL"/>
+                                    <outlet property="lblCardNum" destination="KJH-JC-ZOP" id="gks-rJ-hFo"/>
+                                    <segue destination="2gU-du-eaH" kind="show" identifier="SegueToTabBar" id="mo6-Ly-jvb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1Kc-kq-UY0" id="AgF-QU-f0G"/>
+                            <outlet property="delegate" destination="1Kc-kq-UY0" id="KWb-Hd-3PW"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tblAllCards" destination="SEA-NA-LaX" id="INq-Q0-lvz"/>
+                        <segue destination="dRs-Ef-PAC" kind="show" identifier="SegueToCardOption" id="6GJ-TF-isH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkr-1J-gGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="887"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TqD-O6-xMr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrO-ld-Y7a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D7U-WL-WSO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8K5-Vl-lui"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njm-lq-Mhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="134"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="huJ-jh-xgq">
+            <objects>
+                <viewController title="Camera" id="J5p-A0-mcd" customClass="CameraViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X9a-Is-9HK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BarcodeBox" translatesAutoresizingMaskIntoConstraints="NO" id="Say-hM-FND">
+                                <rect key="frame" x="20" y="221" width="335" height="225"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Say-hM-FND" firstAttribute="centerX" secondItem="X9a-Is-9HK" secondAttribute="centerX" id="ZOS-4v-YzO"/>
+                            <constraint firstItem="Wl6-Ye-GvM" firstAttribute="trailing" secondItem="Say-hM-FND" secondAttribute="trailing" constant="20" id="iXM-HH-8Zw"/>
+                            <constraint firstItem="Say-hM-FND" firstAttribute="leading" secondItem="Wl6-Ye-GvM" secondAttribute="leading" constant="20" id="jYu-kj-Uh8"/>
+                            <constraint firstItem="Say-hM-FND" firstAttribute="centerY" secondItem="X9a-Is-9HK" secondAttribute="centerY" id="vEw-aF-nmu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wl6-Ye-GvM"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="Say-hM-FND" id="gJ7-Fc-sH3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYh-Ac-SDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="2390"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="9qW-a8-P2m">
+            <objects>
+                <viewController id="CIv-gr-e3p" customClass="SelectedDetailsViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I1Z-1K-5Au">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTES &amp; DETAILS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK5-c9-s48">
+                                <rect key="frame" x="20" y="254" width="335" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-ll-7Gw">
+                                <rect key="frame" x="20" y="74" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L8V-jO-MUF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J78-L0-Sfh">
+                                <rect key="frame" x="20" y="106" width="335" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="9fh-fg-jCI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Num:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="A9g-gk-abA">
+                                <rect key="frame" x="20" y="194" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HEt-qO-xlP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sample text here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q7c-y0-SM3">
+                                <rect key="frame" x="20" y="284" width="335" height="314"/>
+                                <color key="backgroundColor" red="0.94777500907374168" green="0.94777500907374168" blue="0.94777500907374168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="CIv-gr-e3p" id="Ykf-E0-S45"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q7c-y0-SM3" firstAttribute="leading" secondItem="4r8-CN-npq" secondAttribute="leading" constant="20" id="9qe-s6-yqf"/>
+                            <constraint firstItem="4r8-CN-npq" firstAttribute="bottom" secondItem="Q7c-y0-SM3" secondAttribute="bottom" constant="20" id="AA7-bf-mGq"/>
+                            <constraint firstItem="6HB-ll-7Gw" firstAttribute="top" secondItem="4r8-CN-npq" secondAttribute="top" constant="10" id="ET6-Sz-Sz7"/>
+                            <constraint firstItem="4r8-CN-npq" firstAttribute="trailing" secondItem="iK5-c9-s48" secondAttribute="trailing" constant="20" id="F60-Ra-h6z"/>
+                            <constraint firstItem="4r8-CN-npq" firstAttribute="trailing" secondItem="A9g-gk-abA" secondAttribute="trailing" constant="20" id="Olw-vl-Ita"/>
+                            <constraint firstItem="6HB-ll-7Gw" firstAttribute="leading" secondItem="4r8-CN-npq" secondAttribute="leading" constant="20" id="R9L-Yn-3E3"/>
+                            <constraint firstItem="J78-L0-Sfh" firstAttribute="top" secondItem="6HB-ll-7Gw" secondAttribute="bottom" constant="2" id="RHQ-nG-dzV"/>
+                            <constraint firstItem="iK5-c9-s48" firstAttribute="leading" secondItem="4r8-CN-npq" secondAttribute="leading" constant="20" id="Yg6-6v-vl5"/>
+                            <constraint firstItem="iK5-c9-s48" firstAttribute="top" secondItem="A9g-gk-abA" secondAttribute="bottom" constant="30" id="bce-ld-CsF"/>
+                            <constraint firstItem="4r8-CN-npq" firstAttribute="trailing" secondItem="Q7c-y0-SM3" secondAttribute="trailing" constant="20" id="c2S-fz-cpt"/>
+                            <constraint firstItem="4r8-CN-npq" firstAttribute="trailing" secondItem="6HB-ll-7Gw" secondAttribute="trailing" constant="20" id="ewr-Sg-ljl"/>
+                            <constraint firstItem="4r8-CN-npq" firstAttribute="trailing" secondItem="J78-L0-Sfh" secondAttribute="trailing" constant="20" id="fX2-0u-RIG"/>
+                            <constraint firstItem="Q7c-y0-SM3" firstAttribute="top" secondItem="iK5-c9-s48" secondAttribute="bottom" id="lzl-Mj-E7h"/>
+                            <constraint firstItem="A9g-gk-abA" firstAttribute="top" secondItem="J78-L0-Sfh" secondAttribute="bottom" constant="2" id="mV4-va-kCK"/>
+                            <constraint firstItem="A9g-gk-abA" firstAttribute="leading" secondItem="4r8-CN-npq" secondAttribute="leading" constant="20" id="ozJ-fB-VD2"/>
+                            <constraint firstItem="J78-L0-Sfh" firstAttribute="leading" secondItem="4r8-CN-npq" secondAttribute="leading" constant="20" id="sgJ-os-TMh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4r8-CN-npq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Details" image="SelectedDetails" id="Mb4-YQ-WV4"/>
+                    <connections>
+                        <outlet property="cardDetails" destination="Q7c-y0-SM3" id="qV8-jq-gu6"/>
+                        <outlet property="imgBarcode" destination="J78-L0-Sfh" id="h6E-ws-w7K"/>
+                        <outlet property="lblCardName" destination="6HB-ll-7Gw" id="sqh-vO-Xif"/>
+                        <outlet property="lblCardNum" destination="A9g-gk-abA" id="JQY-NM-dvT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfU-4B-Jy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="2390"/>
+        </scene>
+        <!--Card-->
+        <scene sceneID="xnx-Dg-I9H">
+            <objects>
+                <viewController id="onI-11-Mzq" customClass="SelectedCardViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vSV-zW-2jd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zww-dY-V6q">
+                                <rect key="frame" x="20" y="106" width="335" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="MAg-e9-jb2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jOb-qi-DSb">
+                                <rect key="frame" x="20" y="74" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b7k-7X-pPP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Num:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="S8I-AE-Gnt">
+                                <rect key="frame" x="20" y="194" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fbx-fk-Gso"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dO-tp-7wG">
+                                <rect key="frame" x="16" y="284" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7dO-tp-7wG" secondAttribute="height" multiplier="1:1" id="9p6-B5-IUg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="DefaultImage"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="frontViewPressed:" destination="onI-11-Mzq" eventType="touchUpInside" id="Tdw-nE-epc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD PHOTOS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSl-ni-e1c">
+                                <rect key="frame" x="20" y="254" width="335" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-im-WWX">
+                                <rect key="frame" x="199" y="284" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8ie-im-WWX" secondAttribute="height" multiplier="1:1" id="49C-L5-yJg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="DefaultImage"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backViewPressed:" destination="onI-11-Mzq" eventType="touchUpInside" id="gsy-s9-IJ5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcB-Wy-G6m">
+                                <rect key="frame" x="199" y="452" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9rE-wi-5ff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRONT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ7-iC-tQB">
+                                <rect key="frame" x="16" y="452" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="v7X-eW-H7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CtW-Mu-HCF" firstAttribute="trailing" secondItem="QcB-Wy-G6m" secondAttribute="trailing" constant="16" id="7md-n7-32z"/>
+                            <constraint firstItem="8ie-im-WWX" firstAttribute="height" secondItem="7dO-tp-7wG" secondAttribute="height" id="8Uu-Oq-Ko7"/>
+                            <constraint firstItem="7dO-tp-7wG" firstAttribute="leading" secondItem="CtW-Mu-HCF" secondAttribute="leading" constant="16" id="9B6-M5-asd"/>
+                            <constraint firstItem="S8I-AE-Gnt" firstAttribute="leading" secondItem="CtW-Mu-HCF" secondAttribute="leading" constant="20" id="BCG-gb-z9j"/>
+                            <constraint firstItem="8ie-im-WWX" firstAttribute="leading" secondItem="7dO-tp-7wG" secondAttribute="trailing" constant="23" id="Bi6-sp-hbP"/>
+                            <constraint firstItem="CtW-Mu-HCF" firstAttribute="trailing" secondItem="8ie-im-WWX" secondAttribute="trailing" constant="16" id="C2F-vP-pCa"/>
+                            <constraint firstItem="eSl-ni-e1c" firstAttribute="top" secondItem="S8I-AE-Gnt" secondAttribute="bottom" constant="30" id="Cqv-HG-bHp"/>
+                            <constraint firstItem="CtW-Mu-HCF" firstAttribute="trailing" secondItem="eSl-ni-e1c" secondAttribute="trailing" constant="20" id="DRf-oL-qVN"/>
+                            <constraint firstItem="CtW-Mu-HCF" firstAttribute="trailing" secondItem="jOb-qi-DSb" secondAttribute="trailing" constant="20" id="It4-Qr-UER"/>
+                            <constraint firstItem="CtW-Mu-HCF" firstAttribute="trailing" secondItem="S8I-AE-Gnt" secondAttribute="trailing" constant="20" id="KWX-yQ-wTx"/>
+                            <constraint firstItem="jOb-qi-DSb" firstAttribute="top" secondItem="CtW-Mu-HCF" secondAttribute="top" constant="10" id="NzJ-sO-95a"/>
+                            <constraint firstItem="CJ7-iC-tQB" firstAttribute="leading" secondItem="CtW-Mu-HCF" secondAttribute="leading" constant="16" id="UZt-zd-fGN"/>
+                            <constraint firstItem="Zww-dY-V6q" firstAttribute="leading" secondItem="CtW-Mu-HCF" secondAttribute="leading" constant="20" id="WVm-j2-Wc4"/>
+                            <constraint firstItem="jOb-qi-DSb" firstAttribute="leading" secondItem="CtW-Mu-HCF" secondAttribute="leading" constant="20" id="X5C-D6-8Ss"/>
+                            <constraint firstItem="Zww-dY-V6q" firstAttribute="top" secondItem="jOb-qi-DSb" secondAttribute="bottom" constant="2" id="b5u-pQ-Zae"/>
+                            <constraint firstItem="7dO-tp-7wG" firstAttribute="top" secondItem="eSl-ni-e1c" secondAttribute="bottom" id="cn8-mB-bc6"/>
+                            <constraint firstItem="CtW-Mu-HCF" firstAttribute="trailing" secondItem="Zww-dY-V6q" secondAttribute="trailing" constant="20" id="h4z-08-aEN"/>
+                            <constraint firstItem="8ie-im-WWX" firstAttribute="width" secondItem="7dO-tp-7wG" secondAttribute="width" id="hDF-mR-QYy"/>
+                            <constraint firstItem="S8I-AE-Gnt" firstAttribute="top" secondItem="Zww-dY-V6q" secondAttribute="bottom" constant="2" id="hlS-Fm-MCG"/>
+                            <constraint firstItem="QcB-Wy-G6m" firstAttribute="width" secondItem="CJ7-iC-tQB" secondAttribute="width" id="iKW-6O-F3M"/>
+                            <constraint firstItem="CJ7-iC-tQB" firstAttribute="top" secondItem="7dO-tp-7wG" secondAttribute="bottom" constant="8" id="mmy-tC-S6m"/>
+                            <constraint firstItem="8ie-im-WWX" firstAttribute="top" secondItem="eSl-ni-e1c" secondAttribute="bottom" id="oUo-Ha-oeb"/>
+                            <constraint firstItem="QcB-Wy-G6m" firstAttribute="top" secondItem="8ie-im-WWX" secondAttribute="bottom" constant="8" id="odo-CQ-ZOT"/>
+                            <constraint firstItem="eSl-ni-e1c" firstAttribute="leading" secondItem="CtW-Mu-HCF" secondAttribute="leading" constant="20" id="qsS-aH-zf2"/>
+                            <constraint firstItem="QcB-Wy-G6m" firstAttribute="leading" secondItem="CJ7-iC-tQB" secondAttribute="trailing" constant="23" id="t66-GO-Gg4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CtW-Mu-HCF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="SelectedCard" selectedImage="SelectedCard" id="QHK-Uh-z8c"/>
+                    <connections>
+                        <outlet property="imgBack" destination="8ie-im-WWX" id="zf6-2F-691"/>
+                        <outlet property="imgBarcode" destination="Zww-dY-V6q" id="POO-xL-QGC"/>
+                        <outlet property="imgFront" destination="7dO-tp-7wG" id="vZl-sc-s4j"/>
+                        <outlet property="lblCardName" destination="jOb-qi-DSb" id="rDE-tl-0qX"/>
+                        <outlet property="lblCardNum" destination="S8I-AE-Gnt" id="ZS2-Vf-erK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhw-xO-wNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951.875" y="2390"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pgp-sa-V9x">
+            <objects>
+                <tabBarController id="2gU-du-eaH" customClass="TabBarController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SmG-ai-g2G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="onI-11-Mzq" kind="relationship" relationship="viewControllers" id="b03-12-S20"/>
+                        <segue destination="CIv-gr-e3p" kind="relationship" relationship="viewControllers" id="RDc-bw-QkM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="As5-dI-5AZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="1639"/>
+        </scene>
+        <!--Manual-->
+        <scene sceneID="KBU-Db-T5b">
+            <objects>
+                <viewController title="Manual" id="dnZ-65-8RN" customClass="ManualViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3LZ-iS-Sda">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Card Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjN-uI-oEE">
+                                <rect key="frame" x="50" y="99" width="275" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="lrx-Hk-9eZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQU-Rh-Evl">
+                                <rect key="frame" x="50" y="135" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dnZ-65-8RN" id="euh-Mg-kvL"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Card Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbE-vg-viw">
+                                <rect key="frame" x="50" y="170" width="275" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ic0-Cf-bCc">
+                                <rect key="frame" x="50" y="208" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dnZ-65-8RN" id="iZh-62-LLN"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Op-O1w">
+                                <rect key="frame" x="50" y="248" width="274" height="42"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="hNz-OY-s9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="CONVERT">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="convertNumToBarcode:" destination="dnZ-65-8RN" eventType="touchUpInside" id="mFW-Sb-uSJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-md-2ec">
+                                <rect key="frame" x="20" y="352" width="335" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="VB7-ci-RJE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-NW-D36">
+                                <rect key="frame" x="20" y="320" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-oG-nCC">
+                                <rect key="frame" x="20" y="440" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.4941176471" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c1W-ZR-3Ab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oVd-Op-O1w" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="50" id="4aW-EY-d9A"/>
+                            <constraint firstItem="KjN-uI-oEE" firstAttribute="top" secondItem="N4I-E4-m0m" secondAttribute="top" constant="35" id="5gM-go-oQH"/>
+                            <constraint firstItem="jbE-vg-viw" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="50" id="AUq-E2-sjI"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="fQU-Rh-Evl" secondAttribute="trailing" constant="50" id="ByD-fF-sAG"/>
+                            <constraint firstItem="oVd-Op-O1w" firstAttribute="top" secondItem="Ic0-Cf-bCc" secondAttribute="bottom" constant="10" id="Kf8-f6-dCN"/>
+                            <constraint firstItem="fQU-Rh-Evl" firstAttribute="top" secondItem="KjN-uI-oEE" secondAttribute="bottom" constant="8" id="MLG-82-QAW"/>
+                            <constraint firstItem="jbE-vg-viw" firstAttribute="top" secondItem="fQU-Rh-Evl" secondAttribute="bottom" constant="5" id="Mq5-yn-69R"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="AZx-NW-D36" secondAttribute="trailing" constant="20" id="POr-1b-ApB"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="KjN-uI-oEE" secondAttribute="trailing" constant="50" id="PpJ-tp-XYM"/>
+                            <constraint firstItem="Czr-oG-nCC" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="20" id="Q2E-fc-4a1"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="aLc-md-2ec" secondAttribute="trailing" constant="20" id="SyF-MP-xDg"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="Czr-oG-nCC" secondAttribute="trailing" constant="20" id="TFG-6B-bLd"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="jbE-vg-viw" secondAttribute="trailing" constant="50" id="THI-s6-Svi"/>
+                            <constraint firstItem="Ic0-Cf-bCc" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="50" id="ZXR-Ki-M2E"/>
+                            <constraint firstItem="AZx-NW-D36" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="20" id="bH7-uu-2Jc"/>
+                            <constraint firstItem="Ic0-Cf-bCc" firstAttribute="top" secondItem="jbE-vg-viw" secondAttribute="bottom" constant="8" id="d1g-bx-5sr"/>
+                            <constraint firstItem="Czr-oG-nCC" firstAttribute="top" secondItem="aLc-md-2ec" secondAttribute="bottom" constant="2" id="i9D-iR-xoM"/>
+                            <constraint firstItem="aLc-md-2ec" firstAttribute="top" secondItem="AZx-NW-D36" secondAttribute="bottom" constant="2" id="lP6-pI-oC5"/>
+                            <constraint firstItem="AZx-NW-D36" firstAttribute="top" secondItem="oVd-Op-O1w" secondAttribute="bottom" constant="30" id="lpb-zD-yFk"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="oVd-Op-O1w" secondAttribute="trailing" constant="51" id="qbc-LM-6a5"/>
+                            <constraint firstItem="KjN-uI-oEE" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="50" id="vaW-mn-rt5"/>
+                            <constraint firstItem="fQU-Rh-Evl" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="50" id="wOf-mx-KbB"/>
+                            <constraint firstItem="aLc-md-2ec" firstAttribute="leading" secondItem="N4I-E4-m0m" secondAttribute="leading" constant="20" id="wP8-P5-yGZ"/>
+                            <constraint firstItem="N4I-E4-m0m" firstAttribute="trailing" secondItem="Ic0-Cf-bCc" secondAttribute="trailing" constant="50" id="wwv-lv-gdM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N4I-E4-m0m"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnConvert" destination="oVd-Op-O1w" id="6WA-2c-g33"/>
+                        <outlet property="imgView" destination="aLc-md-2ec" id="tMe-xQ-bN3"/>
+                        <outlet property="lblCardName" destination="AZx-NW-D36" id="ubM-KZ-Dta"/>
+                        <outlet property="lblCardNum" destination="Czr-oG-nCC" id="QLX-SQ-ehJ"/>
+                        <outlet property="txtCardName" destination="fQU-Rh-Evl" id="zMq-r5-3up"/>
+                        <outlet property="txtCardNum" destination="Ic0-Cf-bCc" id="CEi-ar-YJu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqZ-74-LZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="2390"/>
+        </scene>
+        <!--Deals-->
+        <scene sceneID="WcJ-2a-3ft">
+            <objects>
+                <tableViewController title="Deals" id="WG6-u4-7l3" customClass="DealViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hoz-GV-HOT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DealCell" rowHeight="92" id="Kkc-QO-fkd" customClass="DealCell" customModule="Barcode_Card_Scanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kkc-QO-fkd" id="bIn-dP-PhZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imgCard" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="uh6-PM-6RY">
+                                            <rect key="frame" x="16" y="10" width="63" height="71"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="71" id="5fn-j0-DEU"/>
+                                                <constraint firstAttribute="width" constant="63" id="aU4-1L-s9P"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEAL NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daE-gl-23e">
+                                            <rect key="frame" x="87" y="30" width="272" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uh6-PM-6RY" firstAttribute="leading" secondItem="bIn-dP-PhZ" secondAttribute="leading" constant="16" id="2eX-Qa-Vs6"/>
+                                        <constraint firstAttribute="trailing" secondItem="daE-gl-23e" secondAttribute="trailing" constant="16" id="HbP-Nd-AQA"/>
+                                        <constraint firstAttribute="bottom" secondItem="daE-gl-23e" secondAttribute="bottom" constant="31.5" id="Ru5-Pk-BbP"/>
+                                        <constraint firstItem="uh6-PM-6RY" firstAttribute="top" secondItem="bIn-dP-PhZ" secondAttribute="top" constant="10" id="X6F-sU-8Ix"/>
+                                        <constraint firstItem="daE-gl-23e" firstAttribute="top" secondItem="bIn-dP-PhZ" secondAttribute="top" constant="30" id="f4V-Ob-dTN"/>
+                                        <constraint firstItem="daE-gl-23e" firstAttribute="leading" secondItem="uh6-PM-6RY" secondAttribute="trailing" constant="8" id="nIt-MF-0Nc"/>
+                                        <constraint firstAttribute="bottom" secondItem="uh6-PM-6RY" secondAttribute="bottom" constant="10.5" id="zTF-SE-WYD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgDeal" destination="uh6-PM-6RY" id="QzZ-AZ-JS3"/>
+                                    <outlet property="lblDealName" destination="daE-gl-23e" id="8sU-95-JBc"/>
+                                    <segue destination="pxv-Ti-jlf" kind="show" identifier="SegueToDealWebsite" id="c5b-Df-KhF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WG6-u4-7l3" id="upF-GX-jNW"/>
+                            <outlet property="delegate" destination="WG6-u4-7l3" id="BG6-3W-aiv"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tblDeals" destination="Hoz-GV-HOT" id="yKE-B9-27d"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUD-S4-gg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792.8000000000002" y="886.50674662668678"/>
+        </scene>
+        <!--Deals-->
+        <scene sceneID="tUp-ko-6ZG">
+            <objects>
+                <viewController title="Deals" id="pxv-Ti-jlf" customClass="DealWebsiteViewController" customModule="Barcode_Card_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1QF-Q8-ihU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meT-ja-ngk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-Mx-XLl">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="meT-ja-ngk" firstAttribute="leading" secondItem="Dvd-rm-81I" secondAttribute="leading" id="8Da-fn-eUX"/>
+                            <constraint firstItem="nfy-Mx-XLl" firstAttribute="centerY" secondItem="1QF-Q8-ihU" secondAttribute="centerY" id="SxP-jh-b9G"/>
+                            <constraint firstItem="nfy-Mx-XLl" firstAttribute="centerX" secondItem="1QF-Q8-ihU" secondAttribute="centerX" id="TXw-wE-ztF"/>
+                            <constraint firstItem="meT-ja-ngk" firstAttribute="bottom" secondItem="Dvd-rm-81I" secondAttribute="bottom" id="euS-jP-4S0"/>
+                            <constraint firstItem="meT-ja-ngk" firstAttribute="top" secondItem="Dvd-rm-81I" secondAttribute="top" id="wbs-X4-BYO"/>
+                            <constraint firstItem="meT-ja-ngk" firstAttribute="trailing" secondItem="Dvd-rm-81I" secondAttribute="trailing" id="y2I-7I-RUT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dvd-rm-81I"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="nfy-Mx-XLl" id="DaG-Md-M89"/>
+                        <outlet property="webView" destination="meT-ja-ngk" id="O0R-aa-G8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPI-0f-IFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792.8000000000002" y="1638.5307346326838"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BarcodeBox" width="585" height="225"/>
+        <image name="DefaultImage" width="360" height="202"/>
+        <image name="Logo_Normal" width="828" height="226"/>
+        <image name="SelectedCard" width="24" height="24"/>
+        <image name="SelectedDetails" width="16" height="16"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NpF-cA-zaI"/>
+    </inferredMetricsTieBreakers>
+</document>
